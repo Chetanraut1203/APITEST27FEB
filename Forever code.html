@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendor Registration Form</title>
+<script>
+function show_value(x) {
+    document.getElementById("slider_value").innerHTML = x;
+}
+</script>
+</head>
+<body>
+<form action="">
+<figure id="forever_image">
+    <img id="image1" src="image.jpg" alt="Forever Event Management">
+    <figcaption>Forever Event Management - Crafting Memories</figcaption>
+</figure>
+<table>
+    <caption id="table_caption">Vendor Registration Form</caption>
+    <tr>
+        <td><label for="cname">Company Name:</label></td>
+        <td><input type="text" id="cname" name="cname" required></td>
+    </tr>
+    <tr>
+        <td><label>Type:</label></td>
+        <td>
+            <input type="radio" id="corporation" name="ctype" value="corporation">
+            <label for="corporation">Corporation</label><br>
+            <input type="radio" id="partnership" name="ctype" value="partnership">
+            <label for="partnership">Partnership</label><br>
+            <input type="radio" id="individual" name="ctype" value="individual">
+            <label for="individual">Individual</label><br>
+            <input type="radio" id="others" name="ctype" value="others">
+            <label for="others">Others</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="phno">Phone Number:</label></td>
+        <td><input type="tel" id="phno" name="phno" pattern="[789][0-9]{9}" required></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email ID:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+    </tr>
+    <tr>
+        <td><label for="address">Location:</label></td>
+        <td><textarea id="address" name="address" rows="4" cols="50" required></textarea></td>
+    </tr>
+    <tr>
+        <td><label for="link">Website Address:</label></td>
+        <td><input type="url" id="link" name="link" required></td>
+    </tr>
+    <tr>
+        <td><label for="tin">TIN No:</label></td>
+        <td><input type="number" id="tin" name="tin" required></td>
+    </tr>
+    <tr>
+        <td><label for="expiry">TIN No Expiry Date:</label></td>
+        <td><input type="date" id="expiry" name="expiry" required></td>
+    </tr>
+    <tr>
+        <td><label for="cost">Average Project Cost:</label></td>
+        <td>
+            <input type="range" id="cost" name="cost" min="25000" max="500000" step="1000" onchange="show_value(this.value)" required>
+            <span id="slider_value">25000</span>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="profile">Upload Images of Licence, PAN & Facade:</label></td>
+        <td><input type="file" id="profile" name="profile" accept="image/*" multiple required></td>
+    </tr>
+</table>
+<div id="foot">
+    <input type="submit" value="REGISTER">
+    <input type="reset" value="CLEAR">
+</div>
+</form>
+</body>
+</html>
